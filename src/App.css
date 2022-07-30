@@ -5,7 +5,7 @@
 }
 
 .App-header {
-  background-color: var(--black);
+  background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,7 +15,7 @@
 }
 
 .App main {
-  background-color: #ffc836;
+  background-color: #fff;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -42,7 +42,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body{
-  background: #ffc836;
+  background: #000;
   font-family: 'Open Sans', sans-serif;
 }
 

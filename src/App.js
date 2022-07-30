@@ -11,14 +11,19 @@ import MovieRandomiser from './pages/MovieRandomiser'
 import ShowMovie from './pages/ShowMovie'
 import SearchForm from './pages/SearchForm'
 import AboutUs from './pages/AboutUs'
+import Login from './pages/Login'
+import SearchBox from './pages/SearchFormApi'
 import brockbuster from './components/BrockBuster2.png'
+import useToken from './components/useToken'
 import './App.css';
 
 const moviesCol = collection(db, 'movies')
+console.log(process.env.REACT_APP_TMDB_API_KEY)
 
 export default class App extends React.Component {
 	state = {
 		movieList: [],
+    token: 1
 	}
 
   createMovie = async newMovie => {
@@ -70,16 +75,21 @@ componentDidMount() {
 }
 
 render() {
+  if(!this.state.token) {
+    return <Login onClick={() => this.setState({ token: 1})}/>
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <NavLink exact to='/'>BROCKBUSTER</NavLink>
+        <NavLink exact to='/'><img src={brockbuster}/></NavLink>
         <nav>
           <NavLink exact to='/movies'>MOVIE LIST</NavLink>
           <NavLink exact to='/movies/search'>SEARCH</NavLink>
+          <NavLink exact to='/movies/searchapi'>SEARCH API</NavLink>
           <NavLink exact to='/movies/add'>ADD MOVIE</NavLink>
           <NavLink exact to='/movies/randomiser'>RANDOMISER</NavLink>
           <NavLink exact to='/movies/about-us'>ABOUT US</NavLink>
+          <NavLink exact to='/movies/login'>LOG IN</NavLink>
         </nav>
         </header>
       <main>
@@ -93,6 +103,9 @@ render() {
           <Route exact path='/movies/search'>
             <SearchForm  movieList={this.state.movies} getMovieData={this.getMovieData} />
           </Route>
+          <Route exact path='/movies/searchapi'>
+            <SearchBox  movieList={this.state.movies} getMovieData={this.getMovieData} />
+          </Route>
           <Route exact path='/movies/add'>
             <CreateMovie createMovie={this.createMovie} />
           </Route>
@@ -101,6 +114,9 @@ render() {
           </Route>
           <Route exact path='/movies/about-us'>
             <AboutUs movieList={this.state.movies}/>
+          </Route>
+          <Route exact path='/movies/login'>
+            <Login movieList={this.state.movies}/>
           </Route>
           <Route path='/movies/edit' render={({ location }) =>
             <EditMovie updateMovie={this.updateMovie} location={location} />
