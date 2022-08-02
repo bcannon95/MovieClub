@@ -7,6 +7,7 @@ export default class CreateMovie extends Component {
             poster: '',
             rating: '',
             year: '',
+            viewed: '',
         }
     }
 
@@ -65,6 +66,16 @@ export default class CreateMovie extends Component {
                             className="form-control"
                             name="year"
                             value={this.state.formData.year}
+                            onChange={this.handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Viewed</label>
+                        <input
+                            className="form-control"
+                            name="viewed"
+                            value={this.state.formData.viewed}
                             onChange={this.handleChange}
                             required
                         />

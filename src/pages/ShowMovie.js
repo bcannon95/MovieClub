@@ -23,6 +23,7 @@ export default function ShowMovie(props) {
                         >
                             DELETE
                         </button>
+                        <Link className='btn btn-xs btn-secondary margin-left-10' to={{ pathname: `/movies`}}>RETURN</Link>
                     </div>
                 </div>
 

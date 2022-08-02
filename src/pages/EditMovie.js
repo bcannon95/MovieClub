@@ -64,6 +64,16 @@ export default class EditMoviePage extends Component {
                             required
                         />
                     </div>
+                    <div className="form-group">
+                        <label>Viewed</label>
+                        <input
+                            className="form-control"
+                            name="viewed"
+                            value={this.state.formData.viewed}
+                            onChange={this.handleChange}
+                            required
+                        />
+                    </div>
                     <div>
                         <button
                             type="submit"
