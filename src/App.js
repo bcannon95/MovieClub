@@ -11,7 +11,6 @@ import MovieRandomiser from './pages/MovieRandomiser'
 import ShowMovie from './pages/ShowMovie'
 import SearchForm from './pages/SearchForm'
 import AboutUs from './pages/AboutUs'
-import Login from './pages/Login'
 import SearchBox from './pages/SearchFormApi'
 import WatchedList  from './pages/WatchedList';
 import Awards from './pages/Awards'
@@ -78,9 +77,6 @@ componentDidMount() {
 }
 
 render() {
-  if(!this.state.token) {
-    return <Login onClick={() => this.setState({ token: 1})}/>
-  }
   return (
     <div className="App">
       <header className="App-header">
@@ -94,7 +90,6 @@ render() {
           <NavLink exact to='/movies/add'>ADD MOVIE</NavLink>
           <NavLink exact to='/movies/randomiser'>RANDOMISER</NavLink>
           <NavLink exact to='/movies/about-us'>ABOUT US</NavLink>
-          <NavLink exact to='/movies/login'>LOG IN</NavLink>
         </nav>
         </header>
       <main>
@@ -125,9 +120,6 @@ render() {
           </Route>
           <Route exact path='/movies/about-us'>
             <AboutUs movieList={this.state.movies}/>
-          </Route>
-          <Route exact path='/movies/login'>
-            <Login movieList={this.state.movies}/>
           </Route>
           <Route path='/movies/edit' render={({ location }) =>
             <EditMovie updateMovie={this.updateMovie} location={location} />
