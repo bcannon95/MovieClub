@@ -2,6 +2,7 @@ import React from 'react';
 import bronze from '../components/bronze.png'
 import silver from '../components/silver.png'
 import gold from '../components/gold.png'
+import AwardsCard from '../components/AwardsCard'
 
 export default function Awards(props) {
       

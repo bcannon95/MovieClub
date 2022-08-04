@@ -16,7 +16,7 @@ export default function MovieCard(props) {
                     <p className="card-text"><strong>Year: </strong>{props.movie.year}</p>
                     <button
                         className='btn btn-xs btn-success margin-bottom'
-                        onClick={() => this.setState({viewed: "yes"})}
+                        onClick={() => this.setState({ viewed: "yes"})}
                     >
                         ADD TO WATCHED LIST
                     </button>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MovieCard from '../components/MovieCard';
+
+
 class MovieRandomiser extends React.Component {
   state = {
     movie: null,
@@ -37,21 +39,3 @@ class MovieRandomiser extends React.Component {
  }
 
  export default MovieRandomiser;
-
-//   render() {
-//     return  (
-//       <div class="wrap">
-//          <div class="search">
-//             <button type="button" class="searchButton" onClick={this.displayRandomMovie}>
-//               <i class="fa fa-search"></i>
-//            </button>
-//            {this.state.movie?
-//               <MovieCard movie={this.state.movie}/>
-//            : null}
-//          </div>
-//       </div>
-//     );
-//   }
-// }
-//
-// export default MovieRandomiser;

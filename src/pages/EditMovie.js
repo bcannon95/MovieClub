@@ -78,6 +78,7 @@ export default class EditMoviePage extends Component {
                         <button
                             type="submit"
                             className="btn btn-info mr-2"
+                            to='/movies'
                         >
                             UPDATE MOVIE
                         </button>
