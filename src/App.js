@@ -14,6 +14,7 @@ import AboutUs from './pages/AboutUs'
 import Login from './pages/Login'
 import SearchBox from './pages/SearchFormApi'
 import WatchedList  from './pages/WatchedList';
+import Awards from './pages/Awards'
 import brockbuster from './components/BrockBuster2.png'
 import useToken from './components/useToken'
 import './App.css';
@@ -88,6 +89,7 @@ render() {
           <NavLink exact to='/movies'>MOVIE LIST</NavLink>
           <NavLink exact to='/movies/search'>SEARCH</NavLink>
           <NavLink exact to='/movies/searchapi'>SEARCH API</NavLink>
+          <NavLink exact to='/movies/awards'>AWARDS</NavLink>
           <NavLink exact to='/movies/watched'>WATCHED LIST</NavLink>
           <NavLink exact to='/movies/add'>ADD MOVIE</NavLink>
           <NavLink exact to='/movies/randomiser'>RANDOMISER</NavLink>
@@ -108,6 +110,9 @@ render() {
           </Route>
           <Route exact path='/movies/searchapi'>
             <SearchBox  movieList={this.state.movies} getMovieData={this.getMovieData} />
+          </Route>
+          <Route exact path='/movies/awards'>
+            <Awards movieList={this.state.movies} getMovieData={this.getMovieData} />
           </Route>
           <Route exact path='/movies/watched'>
             <WatchedList  movieList={this.state.movies} getMovieData={this.getMovieData} />
