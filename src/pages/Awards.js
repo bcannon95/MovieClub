@@ -14,6 +14,7 @@ export default function Awards(props) {
     return (
         <>
             <div className='d-flex flex-wrap'>
+                <h2>Awards Area</h2>
                 {props.movieList.map(movie => {
                     console.log(counter);
                     console.log(movie.viewed);
