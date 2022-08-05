@@ -7,15 +7,25 @@ import AwardsCard from '../components/AwardsCard'
 export default function Awards(props) {
       
       let counter = 0;
+      let result = []
+      let sum = 0;
       for (let i = 0; i < props.movieList.length; i++) {
-        if (props.movieList[i].viewed === 'yes') counter++;
+        if (props.movieList[i].viewed === 'yes') 
+        counter++
+        sum += props.movieList[i].rating
+        const curr = sum / counter
+        result[i] = curr
+        ;
       }
       
     return (
         <>
-            <div className='d-flex flex-wrap'>
-                <h2>My Analytics</h2>
-                <p>Movies Viewed: {counter}</p>
+            {/* <div className='d-flex flex-wrap'> */}
+            <div>
+                <h2 className="h2-about-us">My Analytics</h2>
+                <div>
+                <p className="p1-about-us">Movies Viewed: {counter}</p>
+                <p className="p1-about-us">Average Rating: {result}</p>
                 {() => {
                     if(counter >= 20) {
                         return <img className="bbuster" src={gold} />
@@ -43,6 +53,7 @@ export default function Awards(props) {
                     }
                 }
                 )} */}
+            </div>
             </div>
         </>
     )
