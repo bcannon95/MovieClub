@@ -14,8 +14,20 @@ export default function Awards(props) {
     return (
         <>
             <div className='d-flex flex-wrap'>
-                <h2>Awards Area</h2>
-                {props.movieList.map(movie => {
+                <h2>My Analytics</h2>
+                <p>Movies Viewed: {counter}</p>
+                {() => {
+                    if(counter >= 20) {
+                        return <img className="bbuster" src={gold} />
+                        }
+                        if(counter >= 10) {
+                        return <img className="bbuster" src={silver} />
+                        }
+                        if(counter >= 5) {
+                        return <img className="bbuster" src={bronze} />
+                        }
+                }}
+                {/* {props.movieList.map(movie => {
                     console.log(counter);
                     console.log(movie.viewed);
                     console.log(props.movieList);
@@ -30,7 +42,7 @@ export default function Awards(props) {
                     return <img className="bbuster" src={bronze} />
                     }
                 }
-                )}
+                )} */}
             </div>
         </>
     )
