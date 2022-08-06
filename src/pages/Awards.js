@@ -66,8 +66,10 @@ export default function Awards(props) {
                     <div>
                     <p className="p1-about-us">Movies Viewed: {counter}</p>
                     <p className="p1-about-us">Average Rating: {result}</p>
+                    <div>
                     <h2 className="h2-about-us">View Awards</h2>
                         <img className="bbuster" src={gold} />
+                    </div>
                 </div>
                 </div>
                 )
@@ -79,8 +81,10 @@ export default function Awards(props) {
                     <div>
                     <p className="p1-about-us">Movies Viewed: {counter}</p>
                     <p className="p1-about-us">Average Rating: {result}</p>
+                    <div>
                     <h2 className="h2-about-us">View Awards</h2>
                         <img className="bbuster" src={silver} />
+                    </div>
                 </div>
                 </div>
                 )
@@ -92,8 +96,10 @@ export default function Awards(props) {
                     <div>
                     <p className="p1-about-us">Movies Viewed: {counter}</p>
                     <p className="p1-about-us">Average Rating: {result}</p>
+                    <div>
                     <h2 className="h2-about-us">View Awards</h2>
                         <img className="bbuster" src={bronze} />
+                    </div>
                 </div>
                 </div>
                 )
