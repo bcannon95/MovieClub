@@ -79,7 +79,7 @@ render() {
   return (
     <div className="App">
       <header className="App-header">
-        <NavLink exact to='/'><img src={brockbuster}/></NavLink>
+        <NavLink exact to='/'><img src={brockbuster} className="bbuster-home"/></NavLink>
         <nav>
           <NavLink exact to='/movies'>MOVIE LIST</NavLink>
           <NavLink exact to='/movies/search'>SEARCH</NavLink>
