@@ -58,17 +58,16 @@ export default function Awards(props) {
     //     </>
     // )
 
-
             if(counter >= 20) {
                 return (             
                     <div>
-                        <h2 className="h2-about-us">My Analytics</h2>
+                        <h2 className="h2-about-us">My Analytics</h2><br></br>
                     <div>
-                    <p className="p1-about-us">Movies Viewed: {counter}</p>
-                    <p className="p1-about-us">Average Rating: {result}</p>
+                    <p className="p1-about-us">Movies Viewed: {counter}</p><br></br>
+                    <p className="p1-about-us">Average Rating: {result}</p><br></br>
                     <div>
-                    <h2 className="h2-about-us">View Awards</h2>
-                        <img className="bbuster" src={gold} />
+                    <h2 className="h2-about-us">View Awards</h2><br></br>
+                        <img className="awards" src={gold} /><br></br>
                     </div>
                 </div>
                 </div>
@@ -77,13 +76,13 @@ export default function Awards(props) {
                 if(counter >= 10) {
                 return (             
                     <div>
-                        <h2 className="h2-about-us">My Analytics</h2>
+                        <h2 className="h2-about-us">My Analytics</h2><br></br>
                     <div>
-                    <p className="p1-about-us">Movies Viewed: {counter}</p>
-                    <p className="p1-about-us">Average Rating: {result}</p>
+                    <p className="p1-about-us">Movies Viewed: {counter}</p><br></br>
+                    <p className="p1-about-us">Average Rating: {result}</p><br></br>
                     <div>
-                    <h2 className="h2-about-us">View Awards</h2>
-                        <img className="bbuster" src={silver} />
+                    <h2 className="h2-about-us">View Awards</h2><br></br>
+                        <img className="awards" src={silver} /><br></br>
                     </div>
                 </div>
                 </div>
@@ -92,13 +91,13 @@ export default function Awards(props) {
                 if(counter >= 5) {
                 return (             
                     <div>
-                        <h2 className="h2-about-us">My Analytics</h2>
+                        <h2 className="h2-about-us">My Analytics</h2><br></br>
                     <div>
-                    <p className="p1-about-us">Movies Viewed: {counter}</p>
-                    <p className="p1-about-us">Average Rating: {result}</p>
+                    <p className="p1-about-us">Movies Viewed: {counter}</p><br></br>
+                    <p className="p1-about-us">Average Rating: {result}</p><br></br>
                     <div>
-                    <h2 className="h2-about-us">View Awards</h2>
-                        <img className="bbuster" src={bronze} />
+                    <h2 className="h2-about-us">View Awards</h2><br></br>
+                        <img className="awards" src={bronze} /><br></br>
                     </div>
                 </div>
                 </div>
@@ -106,10 +105,10 @@ export default function Awards(props) {
                 } else {
                 return (             
                     <div>
-                        <h2 className="h2-about-us">My Analytics</h2>
+                        <h2 className="h2-about-us">My Analytics</h2><br></br>
                     <div>
-                    <p className="p1-about-us">Movies Viewed: {counter}</p>
-                    <p className="p1-about-us">Average Rating: {result}</p>
+                    <p className="p1-about-us">Movies Viewed: {counter}</p><br></br>
+                    <p className="p1-about-us">Average Rating: {result}</p><br></br>
                 </div>
                 </div>
                 )
